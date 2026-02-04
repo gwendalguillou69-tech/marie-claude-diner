@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #0d1b2a;
+}
+
+/* HERO ROUTE 66 */
+.hero {
+    background: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee") center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85));
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+/* NEON CLIGNOTANT */
+.hero h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5em;
+    color: #ffb703;
+    animation: neonFlicker 2s infinite alternate;
+}
+
+@keyframes neonFlicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 5px #ffb703, 0 0 15px #ff6b35, 0 0 30px #ff6b35;
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+        opacity: 0.6;
+    }
+}
+
+.tagline {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.btn {
+    background: linear-gradient(45deg, #ff6b35, #ffb703);
+    color: #111;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Bebas Neue', cursive;
+    color: #ffb703;
+    font-size: 2.8em;
+}
+
+/* MENU */
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 12px 0;
+}
+
+.fries {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* INSULTES */
+.insult-section {
+    background: linear-gradient(to right, #0d1b2a, #1b263b);
+}
+
+.insult-btn {
+    background: linear-gradient(45deg, #ff6b35, #ffb703);
+    border: none;
+    padding: 15px 35px;
+    font-size: 1.2em;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+#insult-output {
+    margin-top: 25px;
+    font-size: 1.4em;
+    color: #ffb703;
+    min-height: 40px;
+}
+
+footer {
+    background-color: #000814;
+    padding: 25px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}

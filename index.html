@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Marie Claude Diner – Venez et souffrez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="overlay">
+        <h1>MARIE CLAUDE DINER</h1>
+        <p class="tagline">Venez manger. Repartez humilié.</p>
+        <a href="#menu" class="btn">Je veux me faire insulter</a>
+    </div>
+</header>
+
+<section class="about">
+    <h2>Expérience à Paris</h2>
+    <p>Ici on ne respecte personne, surtout pas toi.</p>
+</section>
+
+<section id="menu" class="menu">
+    <h2>Menu (oui, c’est cher, pleure)</h2>
+
+    <div class="menu-item"><span>Burger classique</span><span>14€</span></div>
+    <div class="menu-item"><span>Burger poulet coleslaw</span><span>14€</span></div>
+    <div class="menu-item"><span>Poulet croustillant</span><span>14€</span></div>
+    <div class="menu-item"><span>John Pork Burger</span><span>17€</span></div>
+    <div class="menu-item"><span>Burger César</span><span>17€</span></div>
+    <div class="menu-item"><span>Bao Steak</span><span>17€</span></div>
+    <div class="menu-item"><span>Pulled Pork Salsa</span><span>18€</span></div>
+    <div class="menu-item"><span>Hamburger Confit d'oignon</span><span>18€</span></div>
+
+    <p class="fries">Frites +4€ (oui en plus)</p>
+</section>
+
+<section class="hours">
+    <h2>Horaires</h2>
+    <p>Week-end : 11h30 – 14h30 & 18h30 – 22h30</p>
+</section>
+
+<section class="location">
+    <h2>Adresse</h2>
+    <p>8 Rue Jean Mermoz, 75008 Paris</p>
+</section>
+
+<!-- SECTION INSULTES -->
+<section class="insult-section">
+    <h2>Besoin d’attention ?</h2>
+    <button onclick="randomInsult()" class="insult-btn">Insulte-moi</button>
+    <p id="insult-output"></p>
+</section>
+
+<footer>
+    <p>© Marie Claude Diner – Si t’es vexé, c’est que ça marche</p>
+</footer>
+
+<!-- AUDIO -->
+<audio id="ambiance" loop>
+    <source src="ambiance.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const insults = [
+    "T’as choisi ce burger comme tu choisis tes décisions : mal.",
+    "Même le ketchup te juge.",
+    "T’as une tête à demander la sauce à part.",
+    "On a vu des steaks plus vifs que toi.",
+    "Tu mâches ou tu réfléchis ? Parce que ça avance pas.",
+    "Même la frite croustillante a plus de personnalité.",
+    "On sert à manger, pas des miracles."
+];
+
+function randomInsult() {
+    const output = document.getElementById("insult-output");
+    const random = insults[Math.floor(Math.random() * insults.length)];
+    output.textContent = random;
+    document.getElementById("ambiance").play();
+}
+</script>
+
+</body>
+</html>
